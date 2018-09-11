@@ -1,0 +1,8 @@
+#Use .php instead of .html for the index page
+DirectoryIndex home.php
+
+#Show comingsoon page for all requests.
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_URI} !^/maintenance\.html$
+RewriteRule ^(.*)$ http://domain.com/maintenance.html [R=307,L]
